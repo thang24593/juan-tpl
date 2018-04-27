@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelloBody &#8211; Online Yoga Classes</title>
+    <link rel="canonical" href="https://www.hellobody.com/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/styles/main.css">
+    <!-- <script src="./dist/scripts/jquery.js"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A700%2C400&#038;ver=1438781068">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/scripts/jquery.validate.js"></script>
+    <script src="dist/scripts/jquery.payment.js"></script>
+    <script src="dist/scripts/select2.js"></script>
+</head>
+@@if(logged === true ) {
+    <body class="@@slug page logged-in">
+}
+@@if(logged === false) {
+    <body class="@@slug page">
+}
+<!--[if lt IE 9]>
+<div class="alert alert-warning">
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.      </div>
+<![endif]-->
+
+<header class="header-block based-styles" role="banner">
+    <div class="header-ticket">
+        @@if(logged === false) {
+            <a href="#" title="Give the gift of yoga">Give the gift of yoga</a>
+        }
+        @@if(logged === true) {
+            <a href="#" title="Refer A Friend And Save">Refer A Friend And Save</a>
+        }
+    </div>
+    <div class="header-main">
+        <div class="container-fluid">
+            <button type="button" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a class="navbar-brand" href="https://www.hellobody.com" title="HelloBody">
+                <img src="dist/images/myw-logo@2x.png" alt="HelloBody">
+            </a>
+            @@if(logged === false) {
+                <a href="#" class="btn btn-default btn-go" title="Start your free trial">Start your free trial</a>
+            }
+            <div class="main-nav" role="navigation">
+            @@if(logged === true) {
+                <ul class="logged-toggle">
+                    <li class="account-nav">
+                        <button><i class="ico ico-user"></i><span class="name">JANE CAMPBELL</span></button>
+                        <ul>
+                            <li><a href="#" title="Account settings">Account settings</a></li>
+                            <li><a href="#" title="Refer a frien">Refer a friend</a></li>
+                            <li><a href="#" title="Help">Help</a></li>
+                            <li><a href="#" title="Logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="search-toggle">
+                        <button><i class="ico ico-search-black"></i></button>
+                        <div class="search-box">
+                            <form id="main-search" action="#">
+                                <input type="text" class="key" name="key" placeholder="Search">
+                                <button type="submit"><i class="ico ico-search-white"></i></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#" title="MY Dashboard"><i class="ico ico-dashboard"></i>MY Dashboard</a></li>
+                        <li><a href="#" title="All Classes">All Classes</a></li>
+                        <li><a href="#" title="Journey Series">Journey Series</a></li>
+                        <li><a href="#" title="Teachers">Teachers</a></li>
+                    </ul>
+                </div>
+            }
+            @@if(logged === false) {
+                <a title="Member Login" class="btn-login btn btn-success btn-lg" href="#">Member Login</a>
+                <div class="dropdown">
+                    <ul>
+                        <li class="current-menu-item"><a href="#" title="ABOUT HelloBody">ABOUT HelloBody</a></li>
+                        <li class="has-sub">
+                            <a href="#">Preview Classes</a>
+                            <ul>
+                                <li><a href="#">ALL CLASSES</a></li>
+                                <li><a href="#">Journey Series</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Meet our teachers</a></li>
+                    </ul>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+</header>
